@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="./app.js"></script>
+  <title>Basic calculator</title>
+</head>
+<body class="min-h-dvh bg-gray-100">
+<header class="bg-white">
+  <nav class="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">
+    <div class="flex lg:flex-1">
+      <a href="#" class="-m-1.5 p-1.5">
+        <span class="sr-only">Your Company</span>
+        <img class="h-8 w-auto" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600" alt="">
+      </a>
+    </div>
+  </nav>
+</header>
+<main class="flex item-center justify-center">
+  <div class="calculator">
+    <div id="result" class="border border-black rounded-xl mb-4 py-2 px-2 flex justify-end">0</div>
+    <div class="flex flex-col gap-y-2">
+      <div class="flex gap-2">
+        <button type="button" class="px-3 py-2 text-sm font-medium text-center text-white bg-gray-400 rounded-lg hover:bg-gray-500 focus:ring-4 focus:outline-none focus:ring-gray-300" data-value="left-parenthesis">(</button>
+        <button type="button" class="px-3 py-2 text-sm font-medium text-center text-white bg-gray-400 rounded-lg hover:bg-gray-600 focus:ring-4 focus:outline-none focus:ring-gray-300" data-value="right-parenthesis">)</button>
+        <button type="button" class="px-3 py-2 text-sm font-medium text-center text-white bg-gray-400 rounded-lg hover:bg-gray-600 focus:ring-4 focus:outline-none focus:ring-gray-300" data-value="module">%</button>
+        <button type="button" class="px-3 py-2 text-sm font-medium text-center text-white bg-gray-400 rounded-lg hover:bg-gray-600 focus:ring-4 focus:outline-none focus:ring-gray-300" data-value="reset">C</button>
+      </div>
+      <div class="flex gap-2">
+        <button type="button" class="px-3 py-2 text-sm font-medium text-center text-white bg-gray-400 rounded-lg hover:bg-gray-600 focus:ring-4 focus:outline-none focus:ring-gray-300" data-value="7">7</button>
+        <button type="button" class="px-3 py-2 text-sm font-medium text-center text-white bg-gray-400 rounded-lg hover:bg-gray-600 focus:ring-4 focus:outline-none focus:ring-gray-300" data-value="8">8</button>
+        <button type="button" class="px-3 py-2 text-sm font-medium text-center text-white bg-gray-400 rounded-lg hover:bg-gray-600 focus:ring-4 focus:outline-none focus:ring-gray-300" data-value="9">9</button>
+        <button type="button" class="px-3 py-2 text-sm font-medium text-center text-white bg-gray-400 rounded-lg hover:bg-gray-600 focus:ring-4 focus:outline-none focus:ring-gray-300" data-value="divide">÷</button>
+      </div>
+      <div class="flex gap-2">
+        <button type="button" class="px-3 py-2 text-sm font-medium text-center text-white bg-gray-400 rounded-lg hover:bg-gray-600 focus:ring-4 focus:outline-none focus:ring-gray-300" data-value="4">4</button>
+        <button type="button" class="px-3 py-2 text-sm font-medium text-center text-white bg-gray-400 rounded-lg hover:bg-gray-600 focus:ring-4 focus:outline-none focus:ring-gray-300" data-value="5">5</button>
+        <button type="button" class="px-3 py-2 text-sm font-medium text-center text-white bg-gray-400 rounded-lg hover:bg-gray-600 focus:ring-4 focus:outline-none focus:ring-gray-300" data-value="6">6</button>
+        <button type="button" class="px-3 py-2 text-sm font-medium text-center text-white bg-gray-400 rounded-lg hover:bg-gray-600 focus:ring-4 focus:outline-none focus:ring-gray-300" data-value="multiply">x</button>
+      </div>
+      <div class="flex gap-2">
+        <button type="button" class="px-3 py-2 text-sm font-medium text-center text-white bg-gray-400 rounded-lg hover:bg-gray-600 focus:ring-4 focus:outline-none focus:ring-gray-300 " data-value="1">1</button>
+        <button type="button" class="px-3 py-2 text-sm font-medium text-center text-white bg-gray-400 rounded-lg hover:bg-gray-600 focus:ring-4 focus:outline-none focus:ring-gray-300 " data-value="2">2</button>
+        <button type="button" class="px-3 py-2 text-sm font-medium text-center text-white bg-gray-400 rounded-lg hover:bg-gray-600 focus:ring-4 focus:outline-none focus:ring-gray-300 " data-value="3">3</button>
+        <button type="button" class="px-3 py-2 text-sm font-medium text-center text-white bg-gray-400 rounded-lg hover:bg-gray-600 focus:ring-4 focus:outline-none focus:ring-gray-300 " data-value="subtract">-</button>
+      </div>
+      <div class="flex gap-2">
+        <button type="button" class="px-3 py-2 text-sm font-medium text-center text-white bg-gray-400 rounded-lg hover:bg-gray-600 focus:ring-4 focus:outline-none focus:ring-gray-300 " data-value="0">0</button>
+        <button type="button" class="px-3 py-2 text-sm font-medium text-center text-white bg-gray-400 rounded-lg hover:bg-gray-600 focus:ring-4 focus:outline-none focus:ring-gray-300 " data-value="dot">.</button>
+        <button type="button" class="px-3 py-2 text-sm font-medium text-center text-white bg-blue-400 rounded-lg hover:bg-blue-600 focus:ring-4 focus:outline-none focus:ring-blue-300 " data-value="equal">=</button>
+        <button type="button" class="px-3 py-2 text-sm font-medium text-center text-white bg-gray-400 rounded-lg hover:bg-gray-600 focus:ring-4 focus:outline-none focus:ring-gray-300 " data-value="increment">+</button>
+      </div>
+    </div>
+  </div>
+</main>
+</body>
+</html>
